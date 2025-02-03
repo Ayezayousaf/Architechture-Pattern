@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detail_activities.DisplayAudio">
+
+    <!-- Title -->
+    <ImageView
+        android:id="@+id/viewAudioImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        android:text="Audio Files"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/playerLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/audioText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/audioSeekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <SeekBar
+        android:id="@+id/audioSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewAudioImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/startDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="0.00"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/audioSeekBar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/audioSeekBar"
+        app:layout_constraintTop_toBottomOf="@+id/audioSeekBar" />
+
+
+    <TextView
+        android:id="@+id/endDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="0.03"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/audioSeekBar"
+        app:layout_constraintTop_toBottomOf="@+id/audioSeekBar" />
+
+    <LinearLayout
+        android:id="@+id/playerLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/grey"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Previous button -->
+        <ImageButton
+            android:id="@+id/btnPrev"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="20dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/previous"
+            android:contentDescription="Previous"
+            android:background="?attr/selectableItemBackground"/>
+
+        <!-- Play/Pause button -->
+        <ImageButton
+            android:id="@+id/btnPlay"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/play"
+            android:contentDescription="Play"
+            android:background="?attr/selectableItemBackground"
+            android:layout_marginHorizontal="16dp"/>
+
+        <!-- Next button -->
+        <ImageButton
+            android:id="@+id/btnNext"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/next"
+            android:contentDescription="Next"
+            android:background="?attr/selectableItemBackground"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

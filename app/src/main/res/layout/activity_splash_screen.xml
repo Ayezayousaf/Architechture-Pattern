@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.SplashScreen">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Media Picker"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textColor="@color/Orange"
+        android:textSize="40sp"
+        android:textAlignment="center"
+        />
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/picture"
+        android:layout_marginTop="50dp"
+        />
+    <Button
+        android:id="@+id/splashButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Started"
+        android:layout_marginTop="80dp"
+        android:textSize="20sp"
+        android:backgroundTint="@color/Orange"
+        />
+
+</LinearLayout>

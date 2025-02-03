@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="15dp"
+    android:elevation="15dp">
+
+    <RelativeLayout
+        android:id="@+id/relativeView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        >
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/gallery"
+            android:padding="5dp"/>
+
+        <ImageView
+            android:id="@+id/playImage"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignTop="@+id/imageView"
+            android:layout_alignEnd="@+id/imageView"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_alignParentStart="true"
+            android:layout_margin="20dp"
+            android:visibility="gone"
+            app:tint="@color/grey"
+            android:src="@drawable/play" />
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@+id/imageView"
+            android:text="This is an image"
+            android:textSize="15sp"
+            android:autoSizeTextType="uniform"
+            android:layout_marginStart="5dp"
+            android:padding="5dp"/>
+
+        <TextView
+            android:id="@+id/size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/name"
+            android:layout_below="@+id/name"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:text="Size"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/unfavourite"
+            android:layout_alignBottom="@id/duration" />
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@+id/size"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
